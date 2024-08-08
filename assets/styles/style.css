@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Quicksand', sans-serif;
+ 
+  height: 100vh;
+  margin: 0;
+ 
+  display: flex;
+  flex-direction: column;
+}
+
+h2, h3, p {
+  color: hsl(227, 83%, 23%);
+  text-align: center;
+}
+ 
+footer {
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  background-color: #a9ecfd;
+  font-weight: bold;
+}
+
+th, td {
+  border: 1px solid #a9ecfd;
+  font-size: 15px;
+  padding: 8px;
+  text-align: left;
+}
+
+nav {
+
+  position: sticky;
+  top: 0;
+
+}
+
+nav a {
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+
+  color: rgb(0, 0, 0);
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+ 
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  padding-block: 1rem;
+  margin-inline: auto;
+ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+  z-index: 9999;
+}
+ 
+.navbar-container .logo img {
+  width: 200px;
+}
+ 
+.navbar-container .nav-list ul { 
+  display: flex;
+  justify-content: center;
+  gap: 2rem 0.1rem;
+}
+ 
+.navbar-container .nav-list li {
+  list-style-type: none;
+}
+ 
+.navbar-container .nav-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+ 
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: hsl(227, 83%, 23%);
+ 
+  transition: all 0.2s ease-in-out;
+}
+ 
+.navbar-container .nav-list li:hover a {
+  background-color: #caf4ff;
+  color: hsl(227, 100%, 57%);
+  font-weight: bold;
+
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.jumbotron {
+  font-size: 18px;
+  padding: 40px;
+  background: rgb(169,236,253);
+  background: linear-gradient(180deg, rgba(169,236,253,1) 25%, rgb(170, 211, 255) 100%);
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.jumbotron img {
+  max-width: 900px;
+  object-position: center;
+}
+
+main {
+  padding: 20px;
+  background-color: #caf4ff;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile img {
+  width: 200px;
+}
+
+.container, .container-pengajar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-feedback{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(169,236,253,1) 25%, rgb(170, 211, 255) 100%);
+  border-radius: 18px;
+  text-align: center;
+  margin: 0 auto; 
+  max-width: 700px;
+}
+
+.menyanyi, .menari, .melukis, .pottery {
+  box-shadow: 0 4px 8px 0 rgb(170, 211, 255);
+  border-radius: 15px;
+  background-color: white;
+
+  padding: 20px;
+  margin: 10px; 
+  max-width: 400px; 
+  text-align: center;
+}
+
+.keunggulan ul {
+  padding: 20;
+  color:hsl(227, 83%, 23%);
+
+}
+
+.keunggulan li {
+  margin-bottom: 7px; 
+  color:hsl(227, 83%, 23%);
+
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 white;
+  border-radius: 15px;
+  background-color: white;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+.card daftar{
+  background: linear-gradient(180deg, rgba(169,236,253,1) 25%, rgb(170, 211, 255) 100%);
+}
+
+table {
+  width: 100%;
+  max-width: 400px; 
+  margin: 0 auto; 
+}
+
+.jumbotron button {
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+  
+    background-color: #FFD234;
+  
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(227, 83%, 23%);
+  
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+  }
+  
+  .jumbotron button:hover {
+    border: 3px solid hsl(227, 83%, 23%);
+    background-color: white;
+  
+    color: hsl(227, 83%, 23%);
+}
+
+aside {
+  flex: 1;
+}
+
+header {
+  display: inline;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+}
